@@ -2,7 +2,7 @@
 
 (let ((inhibit-redisplay t))
   (mapc #'disable-theme custom-enabled-themes)
-  (load-theme 'deeper-blue t))
+  (load-theme 'tsdh-dark t))
 
 
 ;; Activer le mode CUA pour utiliser C-c (copier), C-v (coller), C-x (couper) et C-z (annuler)
