@@ -1,0 +1,33 @@
+[0] installer git et d'autres packages importants
+
+$ sudo pacman -S --needed git thunar emacs firefox base-devel openssl sqlite bzip2 libffi zlib xz uv htop tree xclip
+
+
+[1] récupérer ce fichier
+
+$ git clone --depth 1 https://github.com/suizokukan/config/brahmanagupta/installation.txt
+
+[2] compilation de Python3.15
+
+cd /tmp
+curl -O https://www.python.org/ftp/python/3.15.0/Python-3.15.0rc2.tar.xz
+$ tar -xf Python-3.15.0rc2.tar.xz
+$ cd Python-3.15.0rc2
+$ ./configure --enable-optimizations
+$ make -j$(nproc)
+$ sudo make altinstall
+$ python3.15 --version
+
+* fichier de config i3 (~/.config/i3/config)
+* fichier de configuration emacs
+  $ git clone --depth 1 https://github.com/jamescherti/minimal-emacs.d ~/.emacs.d
+
+
+
+pour monter une clef:
+$ lsblk
+$ sudo mkdir -p /mnt/my_key
+$ sudo mount /dev/sdb1 /mnt/my_key
+
+pour la démonter :
+$ sudo umount /mnt/my_key

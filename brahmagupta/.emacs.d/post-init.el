@@ -5,22 +5,14 @@
   (load-theme 'deeper-blue t))
 
 
-;; Copier
-(global-set-key (kbd "C-c") #'kill-ring-save)
+;; Activer le mode CUA pour utiliser C-c (copier), C-v (coller), C-x (couper) et C-z (annuler)
+(cua-mode t)
 
-;; Coller
-(global-set-key (kbd "C-v") #'yank)
-
-;; Couper
-;; C-x est conservé comme préfixe Emacs, donc on utilise C-x C-x
-;; pour couper afin de ne pas casser les raccourcis C-x.
-(global-set-key (kbd "C-x C-x") #'kill-region)
+;; Conserver le comportement standard de C-x comme préfixe tout en permettant la sélection/copie standard
+(setq cua-keep-region-after-copy t)
 
 ;; Sauvegarder le fichier courant
-(global-set-key (kbd "C-s") #'save-buffer)
-
-;; Annuler
-(global-set-key (kbd "C-z") #'undo)
+(global-set-key (kbd "C-x s") #'save-buffer)
 
 ;; Ouvrir un fichier
 (global-set-key (kbd "C-x C-o") #'find-file)
