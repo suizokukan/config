@@ -1,5 +1,9 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+set -gx LANG en_US.UTF-8
+set -gx LC_ALL en_US.UTF-8
+
+
 function fish_prompt
     set_color cyan
     echo -n (prompt_pwd)
