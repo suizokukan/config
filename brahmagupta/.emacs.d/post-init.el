@@ -25,3 +25,5 @@
 
 ;; Chercher dans le fichier courant
 (global-set-key (kbd "C-s") #'isearch-forward)
+
+(global-display-line-numbers-mode t)
