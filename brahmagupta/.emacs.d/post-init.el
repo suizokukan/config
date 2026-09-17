@@ -27,3 +27,6 @@
 (global-set-key (kbd "C-s") #'isearch-forward)
 
 (global-display-line-numbers-mode t)
+(global-set-key (kbd "M-g") 'goto-line)
+
+(global-visual-line-mode 1)
