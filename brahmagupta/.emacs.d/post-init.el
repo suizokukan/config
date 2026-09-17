@@ -1,5 +1,10 @@
 ;;; post-init.el --- Mes raccourcis personnels
 
+(let ((inhibit-redisplay t))
+  (mapc #'disable-theme custom-enabled-themes)
+  (load-theme 'deeper-blue t))
+
+
 ;; Copier
 (global-set-key (kbd "C-c") #'kill-ring-save)
 
