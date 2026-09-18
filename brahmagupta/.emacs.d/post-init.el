@@ -30,3 +30,14 @@
 (global-set-key (kbd "M-g") 'goto-line)
 
 (global-visual-line-mode 1)
+
+;; Active l'affichage des colonnes et des lignes à l'échelle globale
+(column-number-mode 1)
+(line-number-mode 1)
+
+;; Modifie le format par défaut de la position dans la mode-line (colonne ligne, indexée à 1)
+(setq-default mode-line-position
+              '(" (" (:eval (format "%d %d" (1+ (current-column)) (line-number-at-pos))) ")"))
+
+;; Force la mise à jour dynamique de la mode-line à chaque mouvement de curseur
+(add-hook 'post-command-hook #'force-mode-line-update)
