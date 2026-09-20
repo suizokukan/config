@@ -41,3 +41,6 @@
 
 ;; Force la mise à jour dynamique de la mode-line à chaque mouvement de curseur
 (add-hook 'post-command-hook #'force-mode-line-update)
+
+
+(global-set-key (kbd "C-<tab>") 'other-window)
