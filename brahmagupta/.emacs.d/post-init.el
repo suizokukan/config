@@ -44,3 +44,21 @@
 
 
 (global-set-key (kbd "C-<tab>") 'other-window)
+
+; ----------------- auto complétion -----------
+;; 1. Installer et activer Corfu (l'interface d'autocomplétion moderne)
+(use-package corfu
+  :ensure t
+  :custom
+  (corfu-auto t)                 ;; Activer l'autocomplétion automatique
+  (corfu-auto-delay 0.1)         ;; Léger délai avant l'apparition du menu (en secondes)
+  (corfu-auto-prefix 1)          ;; Déclencher après 1 caractère saisi
+  :init
+  (global-corfu-mode))
+
+;; 2. Activer Eglot (LSP) automatiquement dans les fichiers Python
+(use-package eglot
+  :ensure t
+  :hook
+  (python-mode . eglot-ensure)      ;; Si vous utilisez le mode Python classique
+  (python-ts-mode . eglot-ensure))  ;; Si vous utilisez Tree-Sitter
