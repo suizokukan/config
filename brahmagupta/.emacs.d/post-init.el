@@ -62,3 +62,7 @@
   :hook
   (python-mode . eglot-ensure)      ;; Si vous utilisez le mode Python classique
   (python-ts-mode . eglot-ensure))  ;; Si vous utilisez Tree-Sitter
+
+
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'post-forward)
