@@ -66,3 +66,13 @@
 
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward)
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            ;; Fixe la limite de remplissage/longueur à 88 pour ce mode
+            (setq fill-column 88)
+            ;; Active l'indicateur visuel de colonne
+            (setq display-fill-column-indicator-character ?⋮)
+            ;; (setq display-fill-column-indicator-character ?│)
+            ;; (setq display-fill-column-indicator-character ?┃)            
+            (display-fill-column-indicator-mode 1)))
