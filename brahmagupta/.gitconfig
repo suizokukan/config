@@ -1,0 +1,5 @@
+[user]
+	email = suizokukan@orange.fr
+	name = Xavier Faure
+[core]
+	editor = emacsclient -nw

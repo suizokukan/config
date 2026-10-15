@@ -7,3 +7,6 @@ rm -rf .config/dconf/
 rm -rf .emacs.d
 mkdir .emacs.d
 cp ~/.emacs.d/*.el .emacs.d
+
+rm .gitconfig
+cp ~/.gitconfig .
