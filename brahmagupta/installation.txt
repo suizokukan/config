@@ -1,6 +1,6 @@
 [0] installer git et d'autres packages importants
 
-$ sudo pacman -S --needed git thunar emacs firefox base-devel openssl sqlite bzip2 libffi zlib xz uv htop tree xclip git-bug libreoffice ttf-libertinus ttf-gentium-plus
+$ sudo pacman -S --needed git thunar emacs firefox base-devel openssl sqlite bzip2 libffi zlib xz uv htop tree xclip git-bug libreoffice ttf-libertinus ttf-gentium-plus noto-fonts-cjk
 
 
 [1] récupérer ce fichier
